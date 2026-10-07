@@ -1,0 +1,10 @@
+const header=document.querySelector('.site-header');
+const toggle=document.querySelector('.menu-toggle');
+const nav=document.querySelector('.nav');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>30),{passive:true});
+toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open)});
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const form=document.getElementById('contactForm');
+form?.addEventListener('submit',e=>{e.preventDefault();alert('Formulário demonstrativo. Configure o envio no script.js para conectar ao e-mail, WhatsApp ou backend.');});
