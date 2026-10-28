@@ -1,31 +1,29 @@
-CAÍQUE & CALEGARI — SITE OFICIAL
+CAÍQUE & CALEGARI — SITE ESTÁTICO
 
-Arquivos:
-- index.html
-- styles.css
-- script.js
+Este projeto usa apenas HTML, CSS, JavaScript e imagens. Não requer Node.js, npm, build, servidor de aplicação ou função serverless para funcionar.
 
-FOTOS:
-Substitua os placeholders pelas fotos oficiais da dupla. Recomenda-se:
-/assets/hero.webp
-/assets/sobre-01.webp
-/assets/pelos-bares-da-cidade.webp
-/assets/video-01.webp
-/assets/video-02.webp
-/assets/video-03.webp
-/assets/galeria-01.webp ... galeria-04.webp
+COMO VISUALIZAR
+Abra index.html no navegador. Um servidor estático do editor, como Live Server, também funciona e facilita ver as mudanças enquanto você edita.
 
-LINKS JÁ CONFIGURADOS:
-Instagram: https://www.instagram.com/caiqueecalegari/
-YouTube: https://www.youtube.com/channel/UCwPNYb1tntRFpdTXJXP7zXw
-Facebook: https://www.facebook.com/CaiqueeCalegariOficial
-Spotify/Entregador: https://open.spotify.com/track/6MW2igjlQ7vdMrlzcR2t46
-HyperFollow: https://distrokid.com/hyperfollow/caqueecalegari/pelos-bares-da-cidade
-WhatsApp comercial: +55 11 94968-5734
-E-mail: midiacaiqueecalegari@gmail.com
+ESTRUTURA
+- index.html: página principal, incluindo Hero com três fotos, chamada para casamentos, seção Contrate e agenda demonstrativa.
+- casamentos.html e casamentos.css: apresentação dos shows para casamentos.
+- acustico-premium.html, acustico-com-banda.html, banda-completa.html: páginas dos formatos de show.
+- styles.css e shows.css: estilos.
+- script.js e shows.js: interações da página e abertura dos vídeos.
+- img/: imagens locais.
 
-FORMULÁRIO:
-O formulário é front-end demonstrativo. Para produção, conecte a um endpoint PHP 8.2+, serviço de e-mail ou WhatsApp.
+AGENDA
+A agenda mostra três apresentações fictícias de 2027 para demonstrar o visual. Elas estão marcadas como exemplos e não devem ser divulgadas como datas confirmadas. Não há conexão com Google Sheets, API ou painel administrativo. Depois da reunião, será possível escolher entre editar as datas manualmente no site ou criar uma área de administração; nenhuma das duas opções está implementada agora.
 
-OBSERVAÇÃO:
-O layout usa apenas HTML5, CSS3 e JavaScript, sem frameworks pesados. Foi preparado para receber painel administrativo futuramente.
+HERO E CASAMENTOS
+O Hero alterna entre img/dupla2.png, img/sobre1.jpeg e img/sobre2.jpeg, com botões para voltar ou avançar. A troca automática fica desativada para visitantes que preferem movimento reduzido. Para substituir ou acrescentar fotos, altere os blocos .hero-slide em index.html.
+A página casamentos.html apresenta os três formatos existentes para uma celebração e abre o WhatsApp com uma mensagem inicial sobre casamento. As fotos e o vídeo nela são materiais gerais de divulgação da dupla, não registros de casamentos.
+
+FORMULÁRIO DE CONTATO
+O formulário da página principal continua demonstrativo e não envia solicitações. Os botões de WhatsApp funcionam como canal de contato.
+
+PUBLICAÇÃO NO GITHUB + VERCEL
+Coloque estes arquivos na raiz de um repositório GitHub. Ao importar na Vercel, escolha o preset Other e a pasta do projeto como Root Directory. Não configure Build Command nem Output Directory personalizado; o index.html está na raiz. Não execute npm start na Vercel.
+
+Os links de Spotify, YouTube, WhatsApp, Instagram e as fontes do Google continuam externos ao projeto.

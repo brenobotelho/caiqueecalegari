@@ -1,0 +1,15 @@
+.wedding-hero .show-hero-photo { position: relative; }
+.wedding-hero .show-hero-photo figcaption { position: absolute; right: 14px; bottom: 12px; padding: 5px 8px; background: rgba(0,0,0,.68); color: #ddd; font-size: 10px; }
+.wedding-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 7vw; }
+.wedding-intro p:first-child { margin-top: 0; }
+.wedding-formats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin-top: 36px; }
+.wedding-format { display: flex; flex-direction: column; min-height: 320px; padding: 28px; border: 1px solid var(--line); background: linear-gradient(145deg,#1d1810,#11100e 70%); }
+.wedding-format-number { color: var(--gold2); font-size: 10px; font-weight: 700; letter-spacing: 1.4px; }
+.wedding-format h3 { margin: 26px 0 18px; font: 600 clamp(30px,3vw,39px)/1 "Barlow Condensed",sans-serif; text-transform: uppercase; }
+.wedding-format p { margin: 0 0 22px; font-size: 13px; }
+.wedding-format a { margin-top: auto; width: max-content; max-width: 100%; color: var(--gold2); font-size: 11px; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 6px; }
+.wedding-format a:hover { color: #fff; }
+.wedding-format a:focus-visible { outline: 2px solid var(--gold2); outline-offset: 5px; }
+.wedding-video { max-width: 750px; }
+@media (max-width: 900px) { .wedding-formats { grid-template-columns: 1fr; } .wedding-format { min-height: 240px; } }
+@media (max-width: 700px) { .wedding-intro { grid-template-columns: 1fr; gap: 12px; } .wedding-format { padding: 24px; } }

@@ -1,0 +1,119 @@
+/* Formatos de show: cartões na home e páginas de apresentação. */
+.show-formats {
+  position: relative;
+  max-width: var(--max);
+  margin: 0 auto 100px;
+}
+
+.show-formats-heading { max-width: 790px; margin-bottom: 42px; }
+.show-formats-heading > p:last-child { max-width: 580px; color: var(--muted); line-height: 1.8; }
+.show-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.show-card { display: flex; flex-direction: column; min-width: 0; background: var(--panel); border: 1px solid var(--line); }
+.show-card-photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: radial-gradient(ellipse at center bottom, #43301a, #14110e 75%); }
+.show-card-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 55%, rgba(0, 0, 0, .55)); pointer-events: none; }
+.show-card-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 32%; transition: transform .45s ease; }
+.show-card-photo--acoustic img { object-fit: contain; object-position: center bottom; }
+.show-card:hover .show-card-photo img { transform: scale(1.035); }
+.show-card-number { position: absolute; bottom: 16px; left: 22px; z-index: 1; font: 600 36px/1 "Barlow Condensed", sans-serif; color: var(--gold2); }
+.show-card-copy { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 28px 24px; }
+.show-card-copy .eyebrow { font-size: 9px; letter-spacing: 1.5px; margin-bottom: 14px; }
+.show-card h3 { margin: 0 0 14px; font: 600 clamp(29px, 2.7vw, 38px)/1.05 "Barlow Condensed", sans-serif; text-transform: uppercase; }
+.show-card-copy > p:not(.eyebrow) { margin: 0 0 20px; font-size: 13px; line-height: 1.75; color: var(--muted); }
+.show-card-copy > .show-card-lineup { min-height: 46px; color: var(--gold2); font-size: 12px; }
+.show-card-copy .btn { margin-top: auto; width: 100%; gap: 14px; }
+.show-card a:focus-visible, .show-page a:focus-visible, .show-page button:focus-visible { outline: 2px solid var(--gold2); outline-offset: 5px; }
+
+.show-page { overflow-x: clip; }
+.show-skip-link { position: fixed; top: -100px; left: 18px; z-index: 110; padding: 12px; background: var(--gold2); color: #080808; }
+.show-skip-link:focus { top: 10px; }
+.show-header { gap: 20px; }
+.show-header-links { display: flex; align-items: center; gap: 26px; }
+.show-header-links a { color: var(--text); text-decoration: none; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+.show-header-links .show-header-contact { color: var(--gold2); }
+.show-detail { max-width: var(--max); margin: auto; padding: 122px 5vw 0; }
+.show-back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 11px; margin-bottom: 36px; }
+.show-back:hover { color: var(--gold2); }
+.show-hero { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 6vw; padding-bottom: 70px; }
+.show-hero h1 { margin: 0 0 28px; font: 700 clamp(56px, 6.8vw, 96px)/.94 "Barlow Condensed", sans-serif; letter-spacing: -1px; text-transform: uppercase; overflow-wrap: anywhere; }
+.show-hero h1 em { font-style: normal; color: var(--gold2); }
+.show-lead { color: #c3beb6; font-size: 16px; line-height: 1.8; max-width: 560px; }
+.show-instruments { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 26px 0 30px; list-style: none; }
+.show-instruments li { padding: 9px 12px; border: 1px solid rgba(214, 167, 77, .3); color: var(--gold2); font-size: 11px; }
+.show-hero-photo { margin: 0; aspect-ratio: 4 / 5; background: radial-gradient(ellipse at center bottom, #43301a, #14110e 75%); border: 1px solid var(--line); overflow: hidden; }
+.show-hero-photo img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 30%; }
+.show-hero-photo--acoustic img { object-fit: contain; object-position: center bottom; }
+.show-section { padding: 64px 0; border-top: 1px solid var(--line); }
+.show-section h2, .show-booking h2 { margin: 0 0 22px; font: 600 clamp(36px, 4.8vw, 58px)/1.02 "Barlow Condensed", sans-serif; text-transform: uppercase; }
+.show-section p, .show-booking > p { color: var(--muted); font-size: 14px; line-height: 1.9; }
+.show-story { display: grid; grid-template-columns: 1.2fr .8fr; gap: 7vw; }
+.show-story p:last-child { margin-bottom: 0; }
+.show-lineup { padding: 28px; background: var(--panel); border: 1px solid var(--line); align-self: start; }
+.show-lineup h3 { margin: 0 0 18px; color: var(--gold2); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+.show-lineup ul { list-style: none; padding: 0; margin: 0; }
+.show-lineup li { display: flex; gap: 18px; padding: 13px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.show-lineup li span { color: var(--gold); font-size: 10px; padding-top: 3px; }
+.show-media-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 30px; }
+.show-media-heading h2 { margin-bottom: 0; }
+.show-media-heading > p { max-width: 380px; margin: 0; font-size: 12px; }
+.show-photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.show-photo-grid figure { margin: 0; }
+.show-photo-grid img { width: 100%; aspect-ratio: 4 / 3; display: block; object-fit: cover; object-position: center 32%; }
+.show-photo-grid figcaption { margin-top: 12px; font-size: 11px; color: var(--muted); }
+.show-video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.show-video-frame { aspect-ratio: 16 / 9; background: var(--panel); position: relative; }
+.show-video-play { display: block; position: relative; width: 100%; height: 100%; padding: 0; border: 1px solid var(--line); cursor: pointer; background: #14110e; color: white; }
+.show-video-play img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: .7; }
+.show-video-play span { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 60px; height: 60px; border: 1px solid var(--gold2); border-radius: 50%; color: var(--gold2); background: rgba(0,0,0,.65); font-size: 18px; }
+.show-video-play:hover img { opacity: 1; }
+.show-video-frame iframe { width: 100%; height: 100%; border: 0; }
+.show-video h3 { margin: 18px 0 10px; font: 600 27px/1.1 "Barlow Condensed", sans-serif; text-transform: uppercase; }
+.show-video a { color: var(--gold2); font-size: 11px; text-underline-offset: 4px; }
+.show-booking { margin: 0 0 64px; padding: 48px; text-align: center; background: radial-gradient(ellipse at center top, rgba(214,167,77,.14), transparent 75%), var(--panel); border: 1px solid rgba(214,167,77,.3); scroll-margin-top: 100px; }
+.show-booking > p { max-width: 600px; margin: 0 auto 26px; }
+.show-booking .show-booking-note { margin: 22px auto 0; font-size: 11px; }
+.show-other-formats { display: flex; flex-wrap: wrap; gap: 14px; }
+.show-other-formats a { padding: 16px 20px; border: 1px solid var(--line); color: var(--text); text-decoration: none; font-size: 12px; }
+.show-other-formats a:hover { color: var(--gold2); border-color: var(--gold); }
+.show-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding: 34px 5vw; border-top: 1px solid var(--line); }
+.show-footer p { color: var(--muted); font-size: 11px; }
+.show-footer a { color: var(--gold2); font-size: 11px; text-decoration: none; }
+
+@media (max-width: 1000px) {
+  .show-cards { gap: 14px; }
+  .show-card-copy { padding: 24px 18px; }
+  .show-card h3 { font-size: 31px; min-height: 66px; }
+  .show-card-copy .btn { padding: 0 12px; font-size: 9px; letter-spacing: .8px; }
+}
+
+@media (max-width: 700px) {
+  .show-cards { grid-template-columns: 1fr; gap: 26px; }
+  .show-formats { margin-bottom: 70px; }
+  .show-card-photo { aspect-ratio: 16 / 10; }
+  .show-card h3 { min-height: 0; font-size: 38px; }
+  .show-card-copy { padding: 26px; }
+  .show-card-copy > .show-card-lineup { min-height: 0; }
+  .show-card-copy .btn { min-height: 48px; font-size: 10px; }
+  .show-header-links { gap: 16px; }
+  .show-header-links a { font-size: 9px; letter-spacing: .4px; }
+  .show-detail { padding: 104px 6vw 0; }
+  .show-back { margin-bottom: 28px; }
+  .show-hero { grid-template-columns: 1fr; gap: 34px; padding-bottom: 48px; }
+  .show-hero h1 { font-size: clamp(49px, 12vw, 76px); }
+  .show-lead { font-size: 14px; }
+  .show-hero-photo { aspect-ratio: 4 / 3; }
+  .show-hero-photo--acoustic { aspect-ratio: 4 / 4; }
+  .show-story { grid-template-columns: 1fr; gap: 30px; }
+  .show-section { padding: 42px 0; }
+  .show-media-heading { display: block; }
+  .show-media-heading > p { margin-top: 18px; }
+  .show-photo-grid { gap: 14px; }
+  .show-photo-grid img { aspect-ratio: 3 / 4; }
+  .show-video-grid { grid-template-columns: 1fr; gap: 32px; }
+  .show-booking { padding: 34px 22px; margin-bottom: 42px; }
+  .show-booking .btn { width: 100%; padding: 0 12px; font-size: 9px; letter-spacing: .6px; }
+  .show-other-formats { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .show-card:hover .show-card-photo img { transform: none; }
+}

@@ -25,6 +25,7 @@
   >
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="shows.css">
 </head>
 
 <body>
@@ -58,6 +59,7 @@
   <a href="#musicas">Músicas</a>
   <a href="#videos">Vídeos</a>
   <a href="#agenda">Agenda</a>
+  <a href="casamentos.html">Casamento</a>
   <a href="#galeria">Galeria</a>
   <a href="#contrate">Contrate</a>
 
@@ -84,11 +86,16 @@
 
 <section class="hero" id="inicio">
 
-  <div class="hero-image">
-    <img
-      src="img/dupla2.png"
-      alt="Caíque & Calegari"
-    >
+  <div class="hero-image" id="heroCarousel">
+    <div class="hero-slide is-active" aria-hidden="false">
+      <img src="img/dupla2.png" alt="Caíque e Calegari em foto de divulgação" fetchpriority="high">
+    </div>
+    <div class="hero-slide" aria-hidden="true">
+      <img src="img/sobre1.jpeg" alt="Caíque e Calegari juntos, com chapéus brancos" loading="lazy">
+    </div>
+    <div class="hero-slide" aria-hidden="true">
+      <img src="img/sobre2.jpeg" alt="A dupla Caíque e Calegari em retrato noturno" loading="lazy">
+    </div>
   </div>
 
   <div class="hero-vignette"></div>
@@ -142,6 +149,12 @@
   <div class="hero-meta">
     <span>SÃO PAULO · SP</span>
     <span>© 2026</span>
+  </div>
+
+  <div class="hero-controls" aria-label="Fotos da dupla">
+    <button class="hero-control" type="button" data-hero-prev aria-label="Foto anterior">←</button>
+    <span class="hero-count" aria-live="polite">01 / 03</span>
+    <button class="hero-control" type="button" data-hero-next aria-label="Próxima foto">→</button>
   </div>
 
   <a class="scroll-cue" href="#sobre">
@@ -569,212 +582,29 @@
   </div>
 
 
-  <!--
-    ATENÇÃO:
-    As datas abaixo são DEMONSTRATIVAS.
-    Substituir pelas datas oficiais antes da publicação.
-  -->
-
   <div class="agenda-notice reveal">
     <span>AGENDA DEMONSTRATIVA</span>
-    <p>
-      Datas ilustrativas para apresentação do site.
-      A agenda oficial será atualizada aqui.
-    </p>
+    <p>Datas, locais e horários fictícios para visualizar como os shows aparecerão.</p>
   </div>
-
 
   <div class="agenda-list reveal">
-
-
-    <!-- EVENTO 01 -->
-
     <article class="agenda-item">
-
-      <div class="agenda-date">
-
-        <strong>10</strong>
-
-        <span>OUT</span>
-
-      </div>
-
-
-      <div class="agenda-info">
-
-        <span>SÁBADO · 22:00</span>
-
-        <h3>São Paulo — SP</h3>
-
-        <p>Festival Sertanejo · São Paulo</p>
-
-      </div>
-
-
-      <a class="agenda-button" href="#contrate">
-        DETALHES ↗
-      </a>
-
+      <div class="agenda-date"><strong>12</strong><span>MAR</span></div>
+      <div class="agenda-info"><span>20H · EXEMPLO</span><h3>SÃO PAULO — SP</h3><p>Espaço ilustrativo · Endereço a definir</p></div>
+      <span class="agenda-button">DATA FICTÍCIA</span>
     </article>
-
-
-    <!-- EVENTO 02 -->
-
     <article class="agenda-item">
-
-      <div class="agenda-date">
-
-        <strong>17</strong>
-
-        <span>OUT</span>
-
-      </div>
-
-
-      <div class="agenda-info">
-
-        <span>SÁBADO · 21:30</span>
-
-        <h3>Campinas — SP</h3>
-
-        <p>Evento Sertanejo · Campinas</p>
-
-      </div>
-
-
-      <a class="agenda-button" href="#contrate">
-        DETALHES ↗
-      </a>
-
+      <div class="agenda-date"><strong>26</strong><span>MAR</span></div>
+      <div class="agenda-info"><span>21H · EXEMPLO</span><h3>CAMPINAS — SP</h3><p>Casa de shows ilustrativa · Endereço a definir</p></div>
+      <span class="agenda-button">DATA FICTÍCIA</span>
     </article>
-
-
-    <!-- EVENTO 03 -->
-
     <article class="agenda-item">
-
-      <div class="agenda-date">
-
-        <strong>24</strong>
-
-        <span>OUT</span>
-
-      </div>
-
-
-      <div class="agenda-info">
-
-        <span>SÁBADO · 23:00</span>
-
-        <h3>Sorocaba — SP</h3>
-
-        <p>Festa Sertaneja · Sorocaba</p>
-
-      </div>
-
-
-      <a class="agenda-button" href="#contrate">
-        DETALHES ↗
-      </a>
-
+      <div class="agenda-date"><strong>16</strong><span>ABR</span></div>
+      <div class="agenda-info"><span>19H · EXEMPLO</span><h3>RIBEIRÃO PRETO — SP</h3><p>Evento ilustrativo · Endereço a definir</p></div>
+      <span class="agenda-button">DATA FICTÍCIA</span>
     </article>
-
-
-    <!-- EVENTO 04 -->
-
-    <article class="agenda-item">
-
-      <div class="agenda-date">
-
-        <strong>31</strong>
-
-        <span>OUT</span>
-
-      </div>
-
-
-      <div class="agenda-info">
-
-        <span>SÁBADO · 22:00</span>
-
-        <h3>Jundiaí — SP</h3>
-
-        <p>Evento Especial · Jundiaí</p>
-
-      </div>
-
-
-      <a class="agenda-button" href="#contrate">
-        DETALHES ↗
-      </a>
-
-    </article>
-
-
-    <!-- EVENTO 05 -->
-
-    <article class="agenda-item">
-
-      <div class="agenda-date">
-
-        <strong>07</strong>
-
-        <span>NOV</span>
-
-      </div>
-
-
-      <div class="agenda-info">
-
-        <span>SÁBADO · 21:00</span>
-
-        <h3>Ribeirão Preto — SP</h3>
-
-        <p>Festival Sertanejo · Ribeirão Preto</p>
-
-      </div>
-
-
-      <a class="agenda-button" href="#contrate">
-        DETALHES ↗
-      </a>
-
-    </article>
-
-
-    <!-- EVENTO 06 -->
-
-    <article class="agenda-item">
-
-      <div class="agenda-date">
-
-        <strong>14</strong>
-
-        <span>NOV</span>
-
-      </div>
-
-
-      <div class="agenda-info">
-
-        <span>SÁBADO · 22:30</span>
-
-        <h3>São José dos Campos — SP</h3>
-
-        <p>Festa Sertaneja · São José dos Campos</p>
-
-      </div>
-
-
-      <a class="agenda-button" href="#contrate">
-        DETALHES ↗
-      </a>
-
-    </article>
-
-
   </div>
-
+  <p class="agenda-demo-note">Exemplos de 2027. Nenhuma dessas apresentações está confirmada.</p>
 
   <div class="agenda-footer reveal">
 
@@ -840,9 +670,73 @@
      CONTRATAÇÃO
 ========================================================== -->
 
+<section class="wedding-teaser" aria-labelledby="wedding-teaser-title">
+  <div class="wedding-teaser-photo">
+    <img src="img/sobre1.jpeg" alt="Caíque e Calegari juntos em fotografia de divulgação" loading="lazy">
+  </div>
+  <div class="wedding-teaser-copy">
+    <p class="eyebrow">CASAMENTOS · A TRILHA DA SUA HISTÓRIA</p>
+    <h2 id="wedding-teaser-title">Um dia único.<br><em>Uma música para lembrar.</em></h2>
+    <p>Conheça as possibilidades de show de Caíque &amp; Calegari para uma celebração de casamento, do acústico à banda completa.</p>
+    <a class="btn btn-primary" href="casamentos.html">Conheça os shows para casamentos <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+
 <section class="contract" id="contrate">
 
   <div class="contract-glow"></div>
+
+  <div class="show-formats" aria-labelledby="show-formats-title">
+    <div class="show-formats-heading">
+      <p class="eyebrow">CONTRATE · FORMATOS DE SHOW</p>
+      <h2 id="show-formats-title">Três formatos.<br><em>A mesma essência.</em></h2>
+      <p>Escolha a formação que combina com o seu evento e conheça de perto cada proposta de Caíque &amp; Calegari.</p>
+    </div>
+
+    <div class="show-cards">
+      <article class="show-card">
+        <div class="show-card-photo show-card-photo--acoustic">
+          <img src="img/dupla1.png" alt="Caíque e Calegari sentados, com violão" width="408" height="612" loading="lazy">
+          <span class="show-card-number" aria-hidden="true">01</span>
+        </div>
+        <div class="show-card-copy">
+          <p class="eyebrow">PROXIMIDADE &amp; SENTIMENTO</p>
+          <h3>Acústico Premium</h3>
+          <p class="show-card-lineup">Voz, violão e sanfona</p>
+          <p>Uma experiência mais intimista, com a força das vozes e o encontro do violão com a sanfona.</p>
+          <a class="btn btn-primary" href="acustico-premium.html" aria-label="Tenho interesse no show Acústico Premium">Tenho interesse <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="show-card">
+        <div class="show-card-photo">
+          <img src="img/sobre1.jpeg" alt="Retrato de Caíque e Calegari com chapéus brancos" width="1024" height="1536" loading="lazy">
+          <span class="show-card-number" aria-hidden="true">02</span>
+        </div>
+        <div class="show-card-copy">
+          <p class="eyebrow">O ACÚSTICO GANHA ENERGIA</p>
+          <h3>Acústico com banda</h3>
+          <p class="show-card-lineup">Voz, violão, sanfona e guitarra</p>
+          <p>A essência acústica encontra a presença da guitarra, em uma formação com mais camadas e personalidade.</p>
+          <a class="btn btn-primary" href="acustico-com-banda.html" aria-label="Tenho interesse no show Acústico com banda">Tenho interesse <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="show-card">
+        <div class="show-card-photo">
+          <img src="img/sobre2.jpeg" alt="Caíque e Calegari em uma fotografia noturna" width="1024" height="1536" loading="lazy">
+          <span class="show-card-number" aria-hidden="true">03</span>
+        </div>
+        <div class="show-card-copy">
+          <p class="eyebrow">PRESENÇA &amp; INTENSIDADE</p>
+          <h3>Banda completa</h3>
+          <p class="show-card-lineup">Voz, violão, sanfona, guitarra, baixo e bateria</p>
+          <p>A formação completa, com a força do baixo e da bateria para ampliar a energia do show.</p>
+          <a class="btn btn-primary" href="banda-completa.html" aria-label="Tenho interesse no show com Banda completa">Tenho interesse <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
 
   <div class="contract-inner">
 
@@ -1043,6 +937,7 @@
   <a href="#sobre">Sobre</a>
   <a href="#musicas">Músicas</a>
   <a href="#agenda">Agenda</a>
+  <a href="casamentos.html">Casamento</a>
   <a href="#contrate">Contrate</a>
 
 </div>
@@ -1062,7 +957,7 @@
 
 
 <div class="copyright">
-  © 2026 Caíque &amp; Calegari. Todos os direitos reservados. Desenvolvido por <a href="instagram.com/brenobotelho_"> Breno Botelho </a>
+  © 2026 Caíque &amp; Calegari. Todos os direitos reservados. Desenvolvido por <a href="https://www.instagram.com/brenobotelho_/" target="_blank" rel="noopener noreferrer"> Breno Botelho </a>
 </div>
 
 
